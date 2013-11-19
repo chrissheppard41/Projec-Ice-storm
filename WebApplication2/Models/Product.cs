@@ -11,12 +11,27 @@ namespace WebApplication2.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Product
     {
+        [Key]
+        [Display(Name = "id")]
         public int id { get; set; }
+
+        [Required(ErrorMessage = "Name is required")]
+        [Display(Name = "Name")]
+        [StringLength(50)]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = "Category is required")]
+        [Display(Name = "Category")]
+        [StringLength(10)]
         public string Category { get; set; }
+
+        [Required(ErrorMessage = "Price is required")]
+        [Display(Name = "Price")]
+        [StringLength(10)]
         public string Price { get; set; }
     }
 }

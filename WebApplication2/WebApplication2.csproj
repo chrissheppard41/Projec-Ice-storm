@@ -115,6 +115,7 @@
       <DependentUpon>Products.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendor\Rest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
